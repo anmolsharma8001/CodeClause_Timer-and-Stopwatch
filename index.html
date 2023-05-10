@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <title>
+            Timer
+        </title>
+    </head>
+    <body>
+        <!--<input type="time" name="time" id="currentdate">-->
+        <div id="mainbox">
+            <ul>
+                <a onclick="openstopwatch()"><li id="stopwatchopen">Stopwatch</li></a>
+                <a onclick="opentimer()"><li id="timeropen">Timer</li></a>
+            </ul>
+        <div id="timerbox">
+            <div id="controlStart">
+                <input type="button" value="▶️" onclick="for_milsecond()" id="startbtn">
+                <input type="button" value="⏸️" onclick="for_stop()" id="stopbtn">
+                <input type="button" value="🔄" onclick="Resettimer()" id="resetbtn">
+                
+            </div>
+            <!--<div id="clocklabel">
+                <label >Hours</label>:
+                <label >Minutes</label>:
+                <label >Second</label>:
+                <label >Milisecond</label>
+            </div>-->
+            <div id="clocktimer">
+                <input type="text" id="hour" value="00" disabled="true">Hr:
+                <input type="text" id="minute" value="00" disabled="true">Min:
+                <input type="text" id="second" value="00" disabled="true">Sec:
+                <input type="text" id="milisecond" value="00" disabled="true">Ms
+            </div>
+        </div>
+        <div id="timerbox2">
+            <div id="controlStart">
+                <input type="button" value="▶️" onclick="timermain()" id="tstartbtn">
+                <input type="button" value="⏸️" onclick="timerstop()" id="tstopbtn">
+                <input type="button" value="🔄" onclick="timerstop()" id="tresetbtn">
+                
+            </div>
+           
+            <div id="clocktimer">
+                <input type="number" id="tminute" value="2" oninput="Checkzero()" style="width: 70px;">Min:
+                <input type="text" id="tsecond" value="0" disabled="true">Sec:
+                <input type="text" id="tmilisecond" value="0" disabled="true">Ms
+            </div>
+        </div>
+    </div>
+    <audio id="myAudio">
+        <source src="beep.ogg" type="audio/ogg">
+        <source src="beep.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </body>
+</html>
