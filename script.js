@@ -176,8 +176,8 @@ function timerforcestop(){
         document.getElementById("tstartbtn").ariaDisabled="true";
         document.getElementById("tstopbtn").value="▶️";
         document.getElementById("tminute").value=1;
-        document.getElementById("tsecond").value=1;
-        document.getElementById("tmilisecond").value=1;
+        document.getElementById("tsecond").value=00;
+        document.getElementById("tmilisecond").value=00;
     }
 }
 //if((tm==0) && (ts==0) && (tms==0)){
